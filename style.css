@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-image: url(stone.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.button-container button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #e0e0e0;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.text-box-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 20;
+}
+
+.text-box-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid black;
+    width: 200px;
+}
+
+.text-box-container button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.text-box-container button:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+.webcam-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    display: none;
+}
+
+.webcam-container video {
+    width: 300px;
+    height: 200px;
+    filter: grayscale(100%) contrast(100%) brightness(100%);
+    transform: scaleX(-1);
+}
+
+.photo-element {
+    position: absolute;
+    width: 200px;
+    pointer-events: none;
+}
